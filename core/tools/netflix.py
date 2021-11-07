@@ -5,7 +5,7 @@ def sprint(*a, **b):
     with mylock:
         print(*a, **b)
 r = requests.session()
-
+os.system("clear")
 print("""[$]BRUTE FORCE
     _   _      _    __ _ _ 
    | \ | | ___| |_ / _| (_)_  __
