@@ -1,10 +1,11 @@
 #!/usr/bin/python
 '''create by Ha3MrX'''
-
+import os
 import smtplib
 from os import system
 
 def main():
+   os.system("clear")
    print '================================================='
    print '               create by King-Nazim              '
    print '================================================='
