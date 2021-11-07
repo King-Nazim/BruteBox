@@ -5,7 +5,7 @@ import os
 from proxylist import ProxyList
 import logging
 
-
+os.system("clear")
 print('''\033[1;36m
     .'``.``.
  __/ (o) `, `.
@@ -25,7 +25,7 @@ print('''\033[1;36m
        ,--' `-,         v1.0  
         **************************************
         * -> Development: King-Nazim         *
-        * -> Telegram: https://T.me/NazimCp  *
+        * -> Telegram: https://t.me/NazimCp  *
         **************************************                                                 
 \033[1;m''')
 
