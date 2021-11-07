@@ -38,27 +38,22 @@ print("\033[1;32m00]\033[3;35mExit\033[0;00m")
 main=int(input("\033[32mEnter Your Option: \033[00m"))
 if main==1:
 	os.system("python core/tools/insta.py")
-	os.system("python main.py")
 
 if main==2:
 	os.system("python core/tools/fb.py")
-	os.system("python main.py")
 
 if main==3:
 	os.system("python core/tools/gmail.py")
-	os.system("python main.py")
 
 if main==4:
 	os.system("python core/tools/twitter.py")
-	os.system("python main.py")
 
 if main==5:
 	os.system("python core/tools/netflix.py")
-	os.system("python main.py")
 
 if main==6:
 	os.system("python core/tools/zip.py")
-	os.system("python main.py")
+
 
 if main==7:
 	os.system("clear")
