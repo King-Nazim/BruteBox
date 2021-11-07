@@ -2,6 +2,7 @@ from __future__ import absolute_import
 from __future__ import print_function
 import requests, sys, threading, time, os, random
 import json
+import os
 from colorama import Fore
 CheckVersion = str(sys.version)
 import re
@@ -18,7 +19,7 @@ end_banner_color="\33[00m"
 onlyPasswords = False
 
 
-
+os.system("clear")
 print('''
                                ....
                                     %
