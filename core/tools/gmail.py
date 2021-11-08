@@ -6,36 +6,7 @@ from os import system
 
 def main():
    os.system("clear")
-   print '================================================='
-   print '               create by King-Nazim              '
-   print '================================================='
-   print '               ++++++++++++++++++++              '
-   print '\n                                               '
-   print '  _,.                                            '
-   print '                                                 '
-   print '                                                 '
-   print '           King                                  '
-   print '       _,.                   '
-   print '     ,` -.)                  '
-   print '    ( _/-\\-._               '
-   print '   /,|`--._,-^|            , '
-   print '   \_| |`-._/||          , | '
-   print '     |  `-, / |         /  / '
-   print '     |     || |        /  /  '
-   print '      `r-._||/   __   /  /   '
-   print '  __,-<_     )`-/  `./  /    '
-   print '  \   `---    \   / /  /     '
-   print '     |           |./  /      '
-   print '     /           //  /       '
-   print ' \_/  \         |/  /        '
-   print '  |    |   _,^- /  /         '
-   print '  |    , ``  (\/  /_         '
-   print '   \,.->._    \X-=/^         '
-   print '   (  /   `-._//^`           '
-   print '    `Y-.____(__}             '
-   print '     |     {__)              ' 
-   print '           ()   V.1.0        '
-
+   os.system("figlet Gmail")
 main()
 print '[1] start the attack'
 print '[2] exit'
