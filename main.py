@@ -37,7 +37,7 @@ print("\033[1;32m8]\033[3;35mAbout\033[0;00m")
 print("\033[1;32m00]\033[3;35mExit\033[0;00m")
 main=int(input("\033[32mEnter Your Option: \033[00m"))
 if main==1:
-	os.system("python core/tools/instagram/instagram.sh")
+	os.system("bash core/tools/instagram/instagram.sh")
 
 if main==2:
 	os.system("python core/tools/fb.py")
